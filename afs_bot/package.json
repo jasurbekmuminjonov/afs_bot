@@ -1,0 +1,33 @@
+{
+  "name": "assistant-bot",
+  "version": "1.0.0",
+  "description": "https://t.me/afstudent_bot",
+  "homepage": "https://github.com/jasurbekmuminjonov/afs_bot#readme",
+  "bugs": {
+    "url": "https://github.com/jasurbekmuminjonov/afs_bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasurbekmuminjonov/afs_bot.git"
+  },
+  "license": "ISC",
+  "author": "https://t.me/jasurbek_muminjonov",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.2",
+    "multer": "^2.0.2",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
