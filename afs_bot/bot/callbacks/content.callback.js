@@ -17,17 +17,31 @@ module.exports = async (bot, query, type, objectId) => {
 
     await bot.sendMessage(
       chatId,
-      `📄 <b>${content.title}</b>\n${text(from.language_code, "downloading_files")}`,
+      `📄 <b>${content.title}</b>\n${text(
+        from.language_code,
+        "downloading_files"
+      )}`,
       { parse_mode: "HTML" }
     );
 
     if (content.attached_files?.length > 0) {
       for (const fileId of content.attached_files) {
         const file = await File.findById(fileId);
-        if (file && file.path) {
-          await bot.sendDocument(chatId, file.path, {
+        if (!file) continue;
+
+        if (file.file_id) {
+          await bot.sendDocument(chatId, file.file_id, {
             caption: file.originalname || "📎 Attached file",
           });
+        } else {
+          const msg = await bot.sendDocument(chatId, file.path, {
+            caption: file.originalname || "📎 Attached file",
+          });
+
+          if (msg?.document?.file_id) {
+            file.file_id = msg.document.file_id;
+            await file.save();
+          }
         }
       }
     } else {

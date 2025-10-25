@@ -6,6 +6,10 @@ const FileSchema = new mongoose.Schema(
       type: String,
       default: null,
     },
+    file_id: {
+      type: String,
+      default: null,
+    },
     filename: {
       type: String,
       default: null,
