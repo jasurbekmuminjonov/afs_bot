@@ -14,12 +14,12 @@ exports.getContent = async (req, res) => {
   try {
     const { subject_id, content_id } = req.query;
     if (content_id) {
-      const content = await Content.findById(content_id);
+      const content = await Content.findById(content_id).populate('subject_id');
       return res.json(content);
     }
     const filter = {};
     if (subject_id) filter.subject_id = subject_id;
-    const contents = await Content.find(filter);
+    const contents = await Content.find(filter).populate('subject_id');
     return res.json(contents);
   } catch (err) {
     console.log(err.message);
