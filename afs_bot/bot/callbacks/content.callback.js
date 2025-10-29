@@ -1,4 +1,7 @@
-const { getContents } = require("../../services/content.service");
+const {
+  getContents,
+  requestContent,
+} = require("../../services/content.service");
 const File = require("../../models/file.model");
 const text = require("../utils/lang");
 
@@ -14,6 +17,7 @@ module.exports = async (bot, query, type, objectId) => {
       await bot.sendMessage(chatId, text(from.language_code, "not_found"));
       return true;
     }
+    await requestContent(objectId);
 
     await bot.sendMessage(
       chatId,

@@ -17,3 +17,11 @@ exports.getContents = async (data) => {
   }
 };
 
+exports.requestContent = async (content_id) => {
+  try {
+    await Content.findByIdAndUpdate(content_id, { $inc: { requests: 1 } });
+    return true;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

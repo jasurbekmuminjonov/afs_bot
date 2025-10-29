@@ -15,6 +15,10 @@ const ContentSchema = new mongoose.Schema(
       type: [mongoose.Schema.Types.ObjectId],
       default: [],
     },
+    requests: {
+      type: Number,
+      default: 0,
+    },
   },
   { timestamps: true }
 );

@@ -42,8 +42,15 @@ const Content = () => {
     },
     {
       title: "Fan nomi",
-      dataIndex: ["subject_id", "subject_name"],
-      render: (text, record) => record.subject_id?.subject_name || "—",
+      render: (_, record) => record.subject_id?.subject_name || "—",
+    },
+    {
+      title: "Fayllar soni",
+      render: (_, record) => record.attached_files.length,
+    },
+    {
+      title: "So'rovlar soni",
+      dataIndex: "requests",
     },
     {
       title: "Biriktirilgan fayllar",
