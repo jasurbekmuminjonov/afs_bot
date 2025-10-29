@@ -1,32 +1,41 @@
 {
   "en": {
     "server_error": "⌛ Server error. Please try again later",
+    "new_content_added": "New content has been added!",
+    "view_material": "View material",
     "select_subject": "📗 Select a subject",
     "all_contents": "📋 All contents",
     "no_contents": "❌ No contents found for this subject.",
     "downloading_files": "📦 Downloading attached files...",
     "no_files": "📭 No files attached to this content.",
     "not_found": "⚠️ Content not found.",
-    "back_to_subjects": "⬅️ Back to subjects"
+    "back_to_subjects": "⬅️ Back to subjects",
+    "files_count":"📎 New files:"
   },
   "ru": {
     "server_error": "⌛ Ошибка сервера. Повторите попытку позже",
+    "new_content_added": "Добавлен новый материал!",
+    "view_material": "Просмотреть материал",
     "select_subject": "📗 Выберите предмет",
     "all_contents": "📋 Все материалы",
     "no_contents": "❌ Для этого предмета нет материалов.",
     "downloading_files": "📦 Загрузка вложенных файлов...",
     "no_files": "📭 Нет вложенных файлов для этого материала.",
     "not_found": "⚠️ Материал не найден.",
-    "back_to_subjects": "⬅️ Назад к предметам"
+    "back_to_subjects": "⬅️ Назад к предметам",
+    "files_count":"📎 Новые файлы:"
   },
   "uz": {
     "server_error": "⌛ Serverda xatolik. Iltimos keyinroq urunib ko'ring",
+    "new_content_added": "Yangi material qo'shildi!",
+    "view_material": "Materialni ko'rish",
     "select_subject": "📗 Fan tanlang",
     "all_contents": "📋 Barcha materiallar",
     "no_contents": "❌ Ushbu fan uchun materiallar topilmadi.",
     "downloading_files": "📦 Biriktirilgan fayllar yuklanmoqda...",
     "no_files": "📭 Ushbu materialga hech qanday fayl biriktirilmagan.",
     "not_found": "⚠️ Material topilmadi.",
-    "back_to_subjects": "⬅️ Fanlar ro'yxatiga qaytish"
+    "back_to_subjects": "⬅️ Fanlar ro'yxatiga qaytish",
+    "files_count":"📎 Yangi fayllar:"
   }
 }
