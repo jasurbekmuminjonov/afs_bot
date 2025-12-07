@@ -20,6 +20,7 @@ const fileFilter = (req, file, cb) => {
     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     "video/mp4",
     "text/plain",
+    "application/zip"
   ];
 
   if (allowedTypes.includes(file.mimetype)) {

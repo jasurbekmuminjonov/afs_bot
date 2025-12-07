@@ -105,7 +105,7 @@ const File = () => {
     <div className="page">
       <input
         type="file"
-        accept="image/*, .pdf, audio/*, video/*, .doc,.docx"
+        accept="image/*, .pdf, audio/*, video/*, .doc, .docx, .txt, .zip"
         capture
         ref={fileRef}
         style={{ display: "none" }}
